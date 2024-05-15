@@ -40,7 +40,7 @@ void fila_mostrar() {
 
 void fila_entrar(){
   if (fila.fim == tamanho) {
-    printf("\nA Fila est� cheia, imposs�vel adicionar Valor!\n\n");
+    printf("\nA Fila esta cheia, impossivel adicionar Valor!\n\n");
     system("pause");
   }
   else
@@ -174,6 +174,7 @@ void menu_pilha(){
 
 int main() {
 
+    system("cls");
     menu_geral();
     int op = 0;
     scanf("%d", &op);
