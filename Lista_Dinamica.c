@@ -4,10 +4,10 @@
 
 //Definindo a estrutura da lista
 
-struct no {
+typedef struct no {
     int dado;
     struct no *proximo;
-};
+} no;
 
 //Definindo variáveis
 
@@ -35,8 +35,8 @@ int main() {
     //Criando o primeiro nó da lista
     
     lista = (ptr_no) malloc(sizeof(no));
-    lista->dado = 0;
-    lista->proximo = NULL;
+    lista -> dado = 0;
+    lista -> proximo = NULL;
     
     //Laço principal
 
@@ -76,14 +76,14 @@ void menu_selecionar(int op){
 //Insere um elemento no final da Lista
 
 void lista_inserir(ptr_no lista){
-    while(lista->proximo != NULL){
-        lista = lista->proximo;  
+    while(lista -> proximo != NULL){
+        lista = lista -> proximo;  
     }
     
-    lista->proximo = (ptr_no) malloc(sizeof(no));
+    lista -> proximo = (ptr_no) malloc(sizeof(no));
     lista = lista->proximo;
-    lista->dado = rand()%100;
-    lista->proximo = NULL;
+    lista -> dado = rand()%100;
+    lista -> proximo = NULL;
 }
 
 //Remove um elemento da Lista
